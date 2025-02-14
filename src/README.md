@@ -16,8 +16,8 @@ This Java application is code that is used with the BankApp.java. It allows you 
 - Lots of hard work :)
 
 ### Authors
-- Princess Debbie
-- Kayley Wells 
+- Princess Debbie (https://github.com/dejohns2)
+- Kayley Wells (https://github.com/kayley-wells)
 ### Disclaimer
 DO NOT MESS WITH CODE OR IT WILL BREAK AND I WON'T BE ABLE TO FIX IT.
 THIS MAKES EVERYONE SAD :(
