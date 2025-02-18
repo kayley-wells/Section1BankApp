@@ -1,14 +1,25 @@
 /**
  * author @kayley-wells
+ *
  * @see <a href="https://github.com/kayley-wells/Section1BankApp">GitHub Repository</a>
  */
-
 
 
 /**
  * The default constructor sets a unique account id based on the last account id and also sets all the initial values for instance field levels.
  */
 public class Account {
+
+    /**
+     * Class variable for maintaining the last account number used.
+     */
+    private static int lastID = 0;
+
+    /**
+     * The unique account number assigned by the default constructor.
+     */
+    private final int id;
+
 
     /**
      * The account owner's first name
@@ -28,15 +39,6 @@ public class Account {
      */
     private double balance;
 
-    /**
-     * Class variable for maintaining the last account number used.
-     */
-    private static int lastID = 0;
-
-    /**
-     * The unique account number assigned by the default constructor.
-     */
-    private int id;
 
     public Account() {
         id = ++lastID;
@@ -65,8 +67,7 @@ public class Account {
     public void setFirstName(String firstName) {
         if (firstName == null || firstName.isEmpty())
             throw new IllegalArgumentException("Invalid first name! Name can't be blank for id: " + id);
-        else
-            this.firstName = firstName;
+        else this.firstName = firstName;
 
 
     }
@@ -80,8 +81,7 @@ public class Account {
     public void setLastName(String lastName) {
         if (lastName == null || lastName.isEmpty())
             throw new IllegalArgumentException("Invalid last name! Name can't be blank for id: " + id);
-        else
-            this.lastName = lastName;
+        else this.lastName = lastName;
     }
 
     /**
@@ -93,8 +93,7 @@ public class Account {
     public void deposit(double amount) {
         if (amount <= 0)
             throw new IllegalArgumentException("Invalid Amount! Amount can't be less than or equal to zero!" + amount);
-        else
-            this.balance += amount;
+        else this.balance += amount;
 
     }
 
@@ -108,12 +107,10 @@ public class Account {
     public void withdraw(double amount) {
         if (amount <= 0)
             throw new IllegalArgumentException("Invalid Amount! Amount can't be less than or equal to zero!" + amount);
-        else
-            this.balance -= amount;
+        else this.balance -= amount;
         if (amount > balance)
             throw new IllegalArgumentException("Insufficient Funds, please enter a number lower than the amount." + amount);
-        else
-            balance -= amount;
+        else balance -= amount;
     }
 
     /**
@@ -122,6 +119,6 @@ public class Account {
      * @return The account's id and name.
      */
     public String toString() {
-        return firstName + " " + lastName;
-    }
+        return "ID #" + id + ": " + firstName + " " + lastName;
 }
+// end of Account class
