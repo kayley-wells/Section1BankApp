@@ -1,12 +1,22 @@
 /**
+ * author @kayley-wells
+ * @see <a href="https://github.com/kayley-wells/Section1BankApp">GitHub Repository</a>
+ */
+
+
+
+/**
  * The default constructor sets a unique account id based on the last account id and also sets all the initial values for instance field levels.
  */
 public class Account {
 
     /**
-     * The account owner's first and last name.
+     * The account owner's first name
      */
     private String firstName;
+    /**
+     * The account owner's last name.
+     */
     private String lastName;
 
     public Account(String firstName, String lastName) {
